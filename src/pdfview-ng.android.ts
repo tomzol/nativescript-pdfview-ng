@@ -58,6 +58,8 @@ export class PDFViewNg extends PDFViewNgCommon {
 
   public createNativeView(): Object {
     let pdfView = new pdfviewer.PDFView(this._context, void 0);
+    pdfView.pageSnap(true);
+    pdfView.pageFling(true);
     return pdfView;
   }
 
